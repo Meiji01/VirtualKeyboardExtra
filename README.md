@@ -1,5 +1,5 @@
-# Jenkins Agent WinService
-An open-source mini application that allows you to use Extended Keyboard multimedia keys found in "Fn" for some keyboard.
+# E Virtual Keyboard
+An open-source mini application that allows you to use Extended Keyboard multimedia keys (Play,Pause,Stop,Next,Previous) found in "Fn" for some keyboard.
 ## Compiler Prerequisites
 If you want to compile the project, the below minimum prerequisite are required
 - Compiler  
