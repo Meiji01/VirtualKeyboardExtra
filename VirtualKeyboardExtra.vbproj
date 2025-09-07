@@ -12,7 +12,12 @@
 	  <Authors>Meij Racpan</Authors>
 	  <AssemblyVersion>1.0.0.0</AssemblyVersion>
 	  <FileVersion>1.0.0.0</FileVersion>
+	  <ApplicationIcon>Resources\Copilot_20250907_204841.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Copilot_20250907_204841.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />

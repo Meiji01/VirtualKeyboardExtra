@@ -23,6 +23,7 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         GroupBox1 = New GroupBox()
         btnbck = New Button()
         btnffwd = New Button()
@@ -43,7 +44,7 @@ Partial Class frmMain
         GroupBox1.Controls.Add(btnPlay)
         GroupBox1.Location = New Point(12, 36)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(360, 83)
+        GroupBox1.Size = New Size(360, 88)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "MultiMedia Controls"
@@ -53,9 +54,9 @@ Partial Class frmMain
         btnbck.BackColor = Color.White
         btnbck.BackgroundImage = My.Resources.Resources.previous_track_red_circle_arrow_20593
         btnbck.BackgroundImageLayout = ImageLayout.Stretch
-        btnbck.Location = New Point(203, 26)
+        btnbck.Location = New Point(192, 26)
         btnbck.Name = "btnbck"
-        btnbck.Size = New Size(50, 43)
+        btnbck.Size = New Size(61, 50)
         btnbck.TabIndex = 3
         btnbck.UseVisualStyleBackColor = False
         ' 
@@ -64,9 +65,9 @@ Partial Class frmMain
         btnffwd.BackColor = Color.White
         btnffwd.BackgroundImage = My.Resources.Resources.fast_forward_red_circle_arrow_20592
         btnffwd.BackgroundImageLayout = ImageLayout.Stretch
-        btnffwd.Location = New Point(270, 26)
+        btnffwd.Location = New Point(277, 26)
         btnffwd.Name = "btnffwd"
-        btnffwd.Size = New Size(54, 43)
+        btnffwd.Size = New Size(61, 50)
         btnffwd.TabIndex = 2
         btnffwd.UseVisualStyleBackColor = False
         ' 
@@ -75,9 +76,9 @@ Partial Class frmMain
         btnStop.BackColor = Color.White
         btnStop.BackgroundImage = My.Resources.Resources.video_stop_5879
         btnStop.BackgroundImageLayout = ImageLayout.Stretch
-        btnStop.Location = New Point(124, 26)
+        btnStop.Location = New Point(105, 26)
         btnStop.Name = "btnStop"
-        btnStop.Size = New Size(57, 43)
+        btnStop.Size = New Size(61, 50)
         btnStop.TabIndex = 1
         btnStop.UseVisualStyleBackColor = False
         ' 
@@ -86,9 +87,9 @@ Partial Class frmMain
         btnPlay.BackColor = Color.White
         btnPlay.BackgroundImage = My.Resources.Resources.play_button_4214
         btnPlay.BackgroundImageLayout = ImageLayout.Stretch
-        btnPlay.Location = New Point(43, 26)
+        btnPlay.Location = New Point(20, 26)
         btnPlay.Name = "btnPlay"
-        btnPlay.Size = New Size(61, 43)
+        btnPlay.Size = New Size(61, 50)
         btnPlay.TabIndex = 0
         btnPlay.UseVisualStyleBackColor = False
         ' 
@@ -135,9 +136,10 @@ Partial Class frmMain
         Controls.Add(Label1)
         Controls.Add(GroupBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "frmMain"
-        Text = "Extra Virtual Key (BETA)"
+        Text = "Extra Virtual Key"
         TopMost = True
         GroupBox1.ResumeLayout(False)
         ResumeLayout(False)
