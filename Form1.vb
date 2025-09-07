@@ -39,6 +39,7 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles tmridle.Tick
+        'Me.Opacity = 1
         If idletime < 5 Then
             idletime = idletime + 1
             Debug.Print("Idling in:" & idletime)
@@ -53,44 +54,75 @@
     End Sub
 
     Private Sub frmMain_MouseLeave(sender As Object, e As EventArgs) Handles Me.MouseLeave
-        'idletime = 0
-        'Timer1_Tick(sender, e)
-        Debug.Print("MOuse leave")
-        Dim curpoint As Point
-        curpoint = Cursor.Position
-        Dim formbound As Rectangle
-        formbound = Me.Bounds
+        ''idletime = 0
+        ''Timer1_Tick(sender, e)
+        'Debug.Print("MOuse leave")
+        'Dim curpoint As Point
+        'curpoint = Cursor.Position
+        'Dim formbound As Rectangle
+        'formbound = Me.Bounds
 
 
-        If Not formbound.Contains(curpoint) Then
-            tmridle.Enabled = True
-            'changeopacity(0.4)
-        End If
+        'If Not formbound.Contains(curpoint) Then
+        '    tmridle.Enabled = True
+        '    'changeopacity(0.4)
+        'End If
+
+        'Dim curpoint As Point = Cursor.Position
+        'Dim formbound As Rectangle = Me.Bounds
+
+        'If Not formbound.Contains(curpoint) Then
+        '    idletime = 0
+        '    tmridle.Enabled = True
+        '    Debug.Print("Mouse left form")
+        'End If
+
+
     End Sub
 
 
-    Private Sub frmMain_MouseHover(sender As Object, e As EventArgs) Handles Me.MouseHover
-        Dim curpoint As Point
-        curpoint = Cursor.Position
-        Dim formbound As Rectangle
-        formbound = Me.Bounds
-        idletime = 0
+    'Private Sub frmMain_MouseHover(sender As Object, e As EventArgs) Handles Me.MouseHover
+    '    Dim curpoint As Point
+    '    curpoint = Cursor.Position
+    '    Dim formbound As Rectangle
+    '    formbound = Me.Bounds
+    '    idletime = 0
 
-        If formbound.Contains(curpoint) Then
-            changeopacity(1)
-            Debug.Print("Mouse Enter")
-        End If
-    End Sub
+    '    If formbound.Contains(curpoint) Then
+    '        changeopacity(1)
+    '        Debug.Print("Mouse Enter")
+    '    End If
+    'End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         End
     End Sub
 
-    Private Sub lblheader_DragOver(sender As Object, e As DragEventArgs) Handles lblheader.DragOver
-        Dim curpoint As Point
-        curpoint = Cursor.Position
-        Debug.Print("Location")
-        Me.Location = curpoint
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
+        tmridle.Interval = 1000 ' 1 second
+        tmridle.Enabled = False
 
     End Sub
+
+    Private Sub frmMain_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+        ' Reset idle time when mouse moves inside the form
+        idletime = 0
+        changeopacity(1)
+        tmridle.Enabled = False
+
+    End Sub
+
+    Private Sub frmMain_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        idletime = 0
+        changeopacity(1)
+        'tmridle.Enabled = True
+        Debug.Print("Form activated")
+    End Sub
+
+    Private Sub frmMain_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
+        'changeopacity(0.4)
+        tmridle.Enabled = True
+        Debug.Print("Form deactivated")
+    End Sub
+
 End Class

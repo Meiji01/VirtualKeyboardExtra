@@ -43,51 +43,59 @@ Partial Class frmMain
         GroupBox1.Controls.Add(btnPlay)
         GroupBox1.Location = New Point(12, 36)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(419, 83)
+        GroupBox1.Size = New Size(360, 83)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "MultiMedia Controls"
         ' 
         ' btnbck
         ' 
-        btnbck.Location = New Point(207, 34)
+        btnbck.BackColor = Color.White
+        btnbck.BackgroundImage = My.Resources.Resources.previous_track_red_circle_arrow_20593
+        btnbck.BackgroundImageLayout = ImageLayout.Stretch
+        btnbck.Location = New Point(203, 26)
         btnbck.Name = "btnbck"
-        btnbck.Size = New Size(95, 26)
+        btnbck.Size = New Size(50, 43)
         btnbck.TabIndex = 3
-        btnbck.Text = "Backward"
-        btnbck.UseVisualStyleBackColor = True
+        btnbck.UseVisualStyleBackColor = False
         ' 
         ' btnffwd
         ' 
-        btnffwd.Location = New Point(308, 34)
+        btnffwd.BackColor = Color.White
+        btnffwd.BackgroundImage = My.Resources.Resources.fast_forward_red_circle_arrow_20592
+        btnffwd.BackgroundImageLayout = ImageLayout.Stretch
+        btnffwd.Location = New Point(270, 26)
         btnffwd.Name = "btnffwd"
-        btnffwd.Size = New Size(89, 26)
+        btnffwd.Size = New Size(54, 43)
         btnffwd.TabIndex = 2
-        btnffwd.Text = "Fast Forward"
-        btnffwd.UseVisualStyleBackColor = True
+        btnffwd.UseVisualStyleBackColor = False
         ' 
         ' btnStop
         ' 
-        btnStop.Location = New Point(115, 34)
+        btnStop.BackColor = Color.White
+        btnStop.BackgroundImage = My.Resources.Resources.video_stop_5879
+        btnStop.BackgroundImageLayout = ImageLayout.Stretch
+        btnStop.Location = New Point(124, 26)
         btnStop.Name = "btnStop"
-        btnStop.Size = New Size(86, 26)
+        btnStop.Size = New Size(57, 43)
         btnStop.TabIndex = 1
-        btnStop.Text = "Stop"
-        btnStop.UseVisualStyleBackColor = True
+        btnStop.UseVisualStyleBackColor = False
         ' 
         ' btnPlay
         ' 
-        btnPlay.Location = New Point(30, 34)
+        btnPlay.BackColor = Color.White
+        btnPlay.BackgroundImage = My.Resources.Resources.play_button_4214
+        btnPlay.BackgroundImageLayout = ImageLayout.Stretch
+        btnPlay.Location = New Point(43, 26)
         btnPlay.Name = "btnPlay"
-        btnPlay.Size = New Size(79, 26)
+        btnPlay.Size = New Size(61, 43)
         btnPlay.TabIndex = 0
-        btnPlay.Text = "Play/Pause"
-        btnPlay.UseVisualStyleBackColor = True
+        btnPlay.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(153, 122)
+        Label1.Location = New Point(129, 146)
         Label1.Name = "Label1"
         Label1.Size = New Size(136, 15)
         Label1.TabIndex = 1
@@ -99,7 +107,7 @@ Partial Class frmMain
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(401, 8)
+        Button1.Location = New Point(342, 8)
         Button1.Name = "Button1"
         Button1.Size = New Size(30, 25)
         Button1.TabIndex = 2
@@ -121,7 +129,7 @@ Partial Class frmMain
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(441, 146)
+        ClientSize = New Size(394, 179)
         Controls.Add(lblheader)
         Controls.Add(Button1)
         Controls.Add(Label1)
